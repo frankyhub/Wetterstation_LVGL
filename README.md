@@ -22,6 +22,31 @@ ESP32, TFT 2.8", Light and Versatile Graphics Library
 
 ![Bild](pic/Wetter01.png)
 
+## Verdrahtung
+
+| TFT LCD | ESP32 | 
+| -------- | -------- | 
+| T_IRQ	|   GPIO 36| 
+| T_OUT	|   GPIO 39| 
+| T_DIN| 	  GPIO 32| 
+| T_CS	 |  GPIO 33| 
+| T_CLK	 |  GPIO 25| 
+| SDO(MISO)| 	GPIO 12| 
+| LED	|   GPIO 21| 
+| SCK	|   GPIO 14| 
+| SDI(MOSI)| 	GPIO 13| 
+| D/C| 	  GPIO 2| 
+| RESET| 	EN/RESET| 
+| CS	|   GPIO 15| 
+| GND	|   GND| 
+| VCC	|   5V (or 3.3V)*| 
+| -------- | -------- | 
+| *| | 
+| VCC = 5V | J1=OPEN| 
+| VCC = 3.3V | J1=CLOSE| 
+| -------- | -------- | 
+
+
 ---
 
 <div style="position:absolute; left:2cm; ">   
