@@ -14,10 +14,6 @@ ESP32, TFT 2.8", Light and Versatile Graphics Library
 </div>
 
 
-## ESP32 - TFT 2.8 Test
-
-![Bild](pic/Wetter00.png)
-
 ## ESP32 - TFT 2.8 Wetterdaten
 
 ![Bild](pic/Wetter01.png)
