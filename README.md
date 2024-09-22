@@ -46,6 +46,7 @@ ESP32, TFT 2.8", Light and Versatile Graphics Library
 | VCC = 3.3V | J1=CLOSE| 
 | -------- | -------- | 
 
+Danke an https://randomnerdtutorials.com/
 
 ---
 
