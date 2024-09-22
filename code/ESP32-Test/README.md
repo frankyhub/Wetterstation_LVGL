@@ -1,8 +1,8 @@
 ## ESP32 GPIO 2 blinkt
 
 
-``C++
-`#include <Arduino.h>
+```C++
+#include <Arduino.h>
 
 #define LED 2
 
@@ -19,4 +19,4 @@ void loop() {
   Serial.println("LED is off");
   delay(1000);
 }
-`.``
+```
