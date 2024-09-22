@@ -1,9 +1,9 @@
 /************************************************************************************************* 
                                       PROGRAMMINFO
 ************************************************************************************************** 
-Funktion: ESP32 TFT2.8" Wetterstatio
+Funktion: ESP32 TFT2.8" Wetterstation
 **************************************************************************************************
-Version: 20.09.2024
+Version: 22.09.2024
 **************************************************************************************************
 Board:  ESP DEV Module ESP32-2432S028R
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -15,7 +15,7 @@ Librarys
 - lvgl" library version 9.X by kisvegabor - https://lvgl.io/
 - TFT_eSPI" library by Bodmer - https://github.com/Bodmer/TFT_eSPI
 - WiFi.h V0.16.1
-- WebServer.h
+
  **************************************************************************************************/
 #include <lvgl.h>
 #include <TFT_eSPI.h>
@@ -138,8 +138,8 @@ void lv_create_main_gui(void) {
 }
 
 /*
-  WWetter Interpretation 
-  0	Clear sky
+  Wetter Interpretation 
+  0	      Clear sky
   1, 2, 3	Mainly clear, partly cloudy, and overcast
   45, 48	Fog and depositing rime fog
   51, 53, 55	Drizzle: Light, moderate, and dense intensity
@@ -147,10 +147,10 @@ void lv_create_main_gui(void) {
   61, 63, 65	Rain: Slight, moderate and heavy intensity
   66, 67	Freezing Rain: Light and heavy intensity
   71, 73, 75	Snow fall: Slight, moderate, and heavy intensity
-  77	Snow grains
+  77	        Snow grains
   80, 81, 82	Rain showers: Slight, moderate, and violent
   85, 86	Snow showers slight and heavy
-  95 *	Thunderstorm: Slight or moderate
+  95 *  	Thunderstorm: Slight or moderate
   96, 99 *	Thunderstorm with slight and heavy hail
 */
 void get_weather_description(int code) {
@@ -280,14 +280,14 @@ void get_weather_data() {
     HTTPClient http;
     String url = String("http://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&current=temperature_2m,relative_humidity_2m,is_day,precipitation,rain,weather_code" + temperature_unit + "&timezone=" + timezone + "&forecast_days=1");
     http.begin(url);
-    int httpCode = http.GET(); // Make the GET request
+    int httpCode = http.GET(); 
 
     if (httpCode > 0) {
       if (httpCode == HTTP_CODE_OK) {
         String payload = http.getString();
-        //Serial.println("Request information:");
-        //Serial.println(payload);
-        // Parse the JSON to extract the time
+        Serial.println("Request information:");
+        Serial.println(payload);
+        Parse the JSON to extract the time
         StaticJsonDocument<1024> doc;
         DeserializationError error = deserializeJson(doc, payload);
         if (!error) {
@@ -296,11 +296,11 @@ void get_weather_data() {
           humidity = String(doc["current"]["relative_humidity_2m"]);
           is_day = String(doc["current"]["is_day"]).toInt();
           weather_code = String(doc["current"]["weather_code"]).toInt();
-          /*Serial.println(temperature);
+          Serial.println(temperature);
           Serial.println(humidity);
           Serial.println(is_day);
           Serial.println(weather_code);
-          Serial.println(String(timezone));*/
+          Serial.println(String(timezone));
           // Split the datetime into date and time
           String datetime_str = String(datetime);
           int splitIndex = datetime_str.indexOf('T');
