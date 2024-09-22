@@ -138,20 +138,20 @@ void lv_create_main_gui(void) {
 }
 
 /*
-  Wetter Interpretation 
-  0	      Clear sky
-  1, 2, 3	Mainly clear, partly cloudy, and overcast
-  45, 48	Fog and depositing rime fog
-  51, 53, 55	Drizzle: Light, moderate, and dense intensity
-  56, 57	Freezing Drizzle: Light and dense intensity
-  61, 63, 65	Rain: Slight, moderate and heavy intensity
-  66, 67	Freezing Rain: Light and heavy intensity
-  71, 73, 75	Snow fall: Slight, moderate, and heavy intensity
-  77	        Snow grains
-  80, 81, 82	Rain showers: Slight, moderate, and violent
-  85, 86	Snow showers slight and heavy
-  95 *  	Thunderstorm: Slight or moderate
-  96, 99 *	Thunderstorm with slight and heavy hail
+  Wetter Auswertung
+  0	      klarer Himmel
+  1, 2, 3	klarer Himmel, teilweise bewölkt, bedeckt
+  45, 48	Nebel, Raureif und Nebel
+  51, 53, 55	leichter Nieselregen, Nieselregen, starker Nieselregen
+  56, 57	gefrierender Nieselregen, 
+  61, 63, 65	leichter Regen, Regen, starker Regen 
+  66, 67	gefrierender Regen, gefrierender starker Regen
+  71, 73, 75	leichter Schneefall, Schneefall, starker Schneefall
+  77	    Hagel
+  80, 81, 82	leichte Regenschauer, egenschauer, starke Regenschauer
+  85, 86	leichter Schneefall, Schneefall
+  95   	  Gewitter, leichter Hagel
+  96, 99 	Gewitter, Hagel
 */
 void get_weather_description(int code) {
   switch (code) {
@@ -163,7 +163,7 @@ void get_weather_description(int code) {
     case 1: 
       if(is_day==1) { lv_image_set_src(weather_image, &image_weather_sun); }
       else { lv_image_set_src(weather_image, &image_weather_night); }
-      weather_description = "vorwiegend klar";
+      weather_description = "klarer Himmel";
       break;
     case 2: 
       lv_image_set_src(weather_image, &image_weather_cloud);
@@ -179,7 +179,7 @@ void get_weather_description(int code) {
       break;
     case 48:
       lv_image_set_src(weather_image, &image_weather_cloud);
-      weather_description = "Raureifnebel";
+      weather_description = "Raureif und Nebel";
       break;
     case 51:
       lv_image_set_src(weather_image, &image_weather_rain);
@@ -207,7 +207,7 @@ void get_weather_description(int code) {
       break;
     case 63:
       lv_image_set_src(weather_image, &image_weather_rain);
-      weather_description = "mittlerer Regen";
+      weather_description = "Regen";
       break;
     case 65:
       lv_image_set_src(weather_image, &image_weather_rain);
@@ -337,10 +337,9 @@ void setup() {
   
   // LVGL
   lv_init();
-  // Register print function for debugging
+  
   lv_log_register_print_cb(log_print);
 
-  // display object
   lv_display_t * disp;
   disp = lv_tft_espi_create(SCREEN_WIDTH, SCREEN_HEIGHT, draw_buf, sizeof(draw_buf));
   lv_display_set_rotation(disp, LV_DISPLAY_ROTATION_270);
