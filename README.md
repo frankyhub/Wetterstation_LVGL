@@ -1,4 +1,3 @@
-
 <a name="oben"></a>
 
 <div align="center">
@@ -6,17 +5,17 @@
 |[:skull:ISSUE](https://github.com/frankyhub/Wetterstation_LVGL/issues?q=is%3Aissue)|[:speech_balloon: Forum /Discussion](https://github.com/frankyhub/Wetterstation_LVGL/discussions)|[:grey_question:WiKi](https://github.com/frankyhub/Wetterstation_LVGL/wiki)||
 |--|--|--|--|
 | | | | |
-|![Static Badge](https://img.shields.io/badge/RepoNr.:-%2073-blue)|<a href="https://github.com/frankyhub/Wetterstation_LVGL/issues">![GitHub issues](https://img.shields.io/github/issues/frankyhub/Wetterstation_LVGL)![GitHub closed issues](https://img.shields.io/github/issues-closed/frankyhub/Wetterstation_LVGL)|<a href="https://github.com/frankyhub/Wetterstation_LVGL/discussions">![GitHub Discussions](https://img.shields.io/github/discussions/frankyhub/Wetterstation_LVGL)|<a href="https://github.com/frankyhub/Wetterstation_LVGL/releases">![GitHub release (with filter)](https://img.shields.io/github/v/release/frankyhub/Wetterstation_LVGL)|
-|![GitHub Created At](https://img.shields.io/github/created-at/frankyhub/Wetterstation_LVGL)| <a href="https://github.com/frankyhub/Wetterstation_LVGL/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/badges/shields" />| <a href="https://github.com/frankyhub/Wetterstation_LVGL/graphs/traffic"><img alt="ViewCount" src="https://views.whatilearened.today/views/github/frankyhub/github-clone-count-badge.svg">  |<a href="https://github.com/frankyhub?tab=stars"> ![GitHub User's stars](https://img.shields.io/github/stars/frankyhub)|
+<a href="https://github.com/frankyhub/Wetterstation_LVGL/issues">![GitHub issues](https://img.shields.io/github/issues/frankyhub/Wetterstation_LVGL)![GitHub closed issues](https://img.shields.io/github/issues-closed/frankyhub/Wetterstation_LVGL)|<a href="https://github.com/frankyhub/Wetterstation_LVGL/discussions">![GitHub Discussions](https://img.shields.io/github/discussions/frankyhub/Wetterstation_LVGL)|<a href="https://github.com/frankyhub/Wetterstation_LVGL/6eleases">![GitHub release (with filter)](https://img.shields.io/github/v/release/frankyhub/Wetterstation_LVGL)|![Static Badge](https://img.shields.io/badge/RepoNr.:-%2073-blue)|
+|![GitHub Created At](https://img.shields.io/github/created-at/frankyhub/Wetterstation_LVGL)| <a href="https://github.com/frankyhub/Wetterstation_LVGL/pulse" alt="Activity"><img src="https://img.shields.io/github/commit-activity/m/badges/shields" />| <a href="https://github.com/frankyhub/Wetterstation_LVGL/graphs/traffic"><img alt="ViewCount" src="https://views.whatilearened.today/views/github/frankyhub/github-clone-count-badge.svg">  |<a href="https://github.com/frankyhub?tab=stars"> ![GitHub User's stars](https://img.shields.io/github/stars/frankyhub)||
+
 </div>
-
-
 
 # Wetterstation_LVGL
 
 ## ESP32 - TFT 2.8 Wetterdaten
 
-![Bild](pic/Wetter01.png)
+<img src="pic/Wetter01.png" width="500"> 
+<br> <br>
 
 ## Verdrahtung
 
